@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
  * Created by stephenwebel1 on 12/2/16.
  */
 @Slf4j
-public class Selection {
+class Selection {
 
     @Getter
     private int digit = 5;
@@ -39,7 +39,7 @@ public class Selection {
             digit += 3;
         } else if (LEFT == instruction && digit % WIDTH != 1) {
             digit--;
-        } else if (RIGHT == instruction  && digit % WIDTH != 0) {
+        } else if (RIGHT == instruction && digit % WIDTH != 0) {
             digit++;
         }
 

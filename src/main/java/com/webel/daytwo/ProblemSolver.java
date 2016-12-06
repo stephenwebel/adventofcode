@@ -2,17 +2,14 @@ package com.webel.daytwo;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.StringJoiner;
 
 /**
  * Created by stephenwebel1 on 12/2/16.
  */
 @Slf4j
-public class ProblemSolver {
-
-    public void solve(List<String> keyCodeInstructions) {
+class ProblemSolver {
+    void solve(List<String> keyCodeInstructions) {
         final Selection selection = new Selection();
 
         StringBuilder stringBuilder = new StringBuilder(keyCodeInstructions.size());
@@ -28,7 +25,5 @@ public class ProblemSolver {
             }
         });
         log.info("{}", stringBuilder.toString());
-
     }
-
 }
