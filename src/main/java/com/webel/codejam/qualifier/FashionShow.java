@@ -1,7 +1,6 @@
-package com.webel.codejam;
+package com.webel.codejam.qualifier;
 
 import com.google.common.collect.Lists;
-import com.sun.tools.internal.ws.processor.model.Model;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.BufferedWriter;
@@ -23,7 +22,6 @@ public class FashionShow {
     }
 
     private void solve() throws Exception {
-        //src/main/resources/A-test.in
         Scanner reader = new Scanner(System.in);  // Reading from System.in
         log.info("Please enter a file path: ");
         String path = reader.next();
