@@ -10,7 +10,8 @@ import java.util.List;
 @Slf4j
 class ProblemSolver {
     void solve(List<String> keyCodeInstructions) {
-        final Selection selection = new Selection();
+//        final Selection selection = new Selection();
+        final NonRectangleSelection selection = new NonRectangleSelection();
 
         StringBuilder stringBuilder = new StringBuilder(keyCodeInstructions.size());
 
@@ -20,8 +21,8 @@ class ProblemSolver {
                 for (char a : instruction.toCharArray()) {
                     selection.advance(a);
                 }
-                log.info("Press {}", selection.getDigit());
-                stringBuilder.append(selection.getDigit());
+                log.info("Press {}", selection.getSelection());
+                stringBuilder.append(selection.getSelection());
             }
         });
         log.info("{}", stringBuilder.toString());

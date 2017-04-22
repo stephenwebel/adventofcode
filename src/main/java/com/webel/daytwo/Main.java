@@ -14,38 +14,7 @@ import java.util.List;
 @Slf4j
 public class Main {
     public static void main(String[] args) throws IOException {
-        tesZeroOnMatchOrReturn();
-
-//        System.out.println("Working Directory = " +
-//                System.getProperty("user.dir"));
-//        List<String> keycodeinstructions = Files.readAllLines(Paths.get("src/main/resources/keycodeinstructions"));
-//        new ProblemSolver().solve(keycodeinstructions);
-    }
-
-
-    private static void tesZeroOnMatchOrReturn() {
-
-        int UP = 'U';
-        int zeroed = zeroOnMatchOrReturn('U',UP);
-
-
-        log.info("Expected 0 received: {}", zeroed);
-
-
-    }
-
-    private static void matchOnXor(int a, int b) {
-
-        int UP = 'U';
-        int NOT_UP = (UP);
-        int zeroed = zeroOnMatchOrReturn('U',UP);
-
-
-        log.info("Expected 0 received: {}", zeroed);
-    }
-
-    private static int zeroOnMatchOrReturn(int a, int b) {
-        int xor = (a ^ b);
-        return a & (xor);
+        List<String> keycodeinstructions = Files.readAllLines(Paths.get("src/main/resources/keycodeinstructions"));
+        new ProblemSolver().solve(keycodeinstructions);
     }
 }
